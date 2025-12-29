@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>王姵甯 | 從護理到航空專業藍圖</title>
+    <style>
+        :root {
+            --primary-teal: #4A9E88; /* 醫療護理綠 */
+            --primary-navy: #1B365D; /* 航空深藍 */
+            --accent-light: #F0F7F5;
+            --text-dark: #333;
+            --white: #ffffff;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: "Helvetica Neue", Helvetica, Arial, "Microsoft JhengHei", sans-serif;
+        }
+
+        body {
+            line-height: 1.6;
+            color: var(--text-dark);
+            background-color: var(--white);
+        }
+
+        /* Header / Hero Section */
+        header {
+            background: linear-gradient(135deg, var(--primary-navy) 0%, var(--primary-teal) 100%);
+            color: var(--white);
+            padding: 80px 20px;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+            font-weight: 700;
+        }
+
+        header h2 {
+            font-size: 1.5rem;
+            font-weight: 300;
+            margin-bottom: 30px;
+            opacity: 0.9;
+        }
+
+        header .mission-box {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 30px;
+            border-radius: 10px;
+            max-width: 800px;
+            margin: 0 auto;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        header p {
+            font-size: 1.1rem;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        /* Sections General */
+        section {
+            padding: 60px 20px;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        h3.section-title {
+            text-align: center;
+            color: var(--primary-navy);
+            font-size: 2rem;
+            margin-bottom: 50px;
+            position: relative;
+        }
+
+        h3.section-title::after {
+            content: '';
+            display: block;
+            width: 60px;
+            height: 3px;
+            background-color: var(--primary-teal);
+            margin: 15px auto 0;
+        }
+
+        /* Core Stones & DNA */
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+        }
+
+        .feature-card {
+            background: var(--accent-light);
+            padding: 30px;
+            border-radius: 8px;
+            text-align: center;
+            border-top: 5px solid var(--primary-teal);
+            transition: transform 0.3s ease;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .feature-card h4 {
+            color: var(--primary-navy);
+            margin-bottom: 15px;
+            font-size: 1.3rem;
+        }
+
+        .dna-section {
+            text-align: center;
+            margin-top: 50px;
+            padding: 40px;
+            background-color: var(--primary-navy);
+            color: var(--white);
+            border-radius: 15px;
+        }
+
+        .dna-circles {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+            margin-top: 20px;
+        }
+
+        .dna-circle {
+            width: 120px;
+            height: 120px;
+            background: var(--primary-teal);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 1.2rem;
+            border: 3px solid var(--white);
+        }
+
+        /* Roadmap Timeline */
+        .timeline {
+            position: relative;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 50%;
+            width: 2px;
+            height: 100%;
+            background: var(--primary-teal);
+            transform: translateX(-50%);
+        }
+
+        .timeline-item {
+            margin-bottom: 40px;
+            position: relative;
+            width: 50%;
+            padding: 0 40px;
+        }
+
+        .timeline-item:nth-child(odd) {
+            left: 0;
+            text-align: right;
+        }
+
+        .timeline-item:nth-child(even) {
+            left: 50%;
+            text-align: left;
+        }
+
+        .timeline-content {
+            background: var(--white);
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            position: relative;
+        }
+
+        .timeline-dot {
+            position: absolute;
+            top: 20px;
+            width: 20px;
+            height: 20px;
+            background: var(--primary-navy);
+            border-radius: 50%;
+            z-index: 2;
+        }
+
+        .timeline-item:nth-child(odd) .timeline-dot {
+            right: -10px;
+        }
+
+        .timeline-item:nth-child(even) .timeline-dot {
+            left: -10px;
+        }
+
+        .timeline-title {
+            color: var(--primary-teal);
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        /* Action & Evaluation */
+        .action-list {
+            list-style: none;
+        }
+
+        .action-list li {
+            background: var(--white);
+            border-bottom: 1px solid #eee;
+            padding: 15px 0;
+            display: flex;
+            align-items: flex-start;
+        }
+
+        .action-list li::before {
+            content: '✓';
+            color: var(--primary-teal);
+            font-weight: bold;
+            margin-right: 15px;
+        }
+
+        .evaluation-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+        }
+
+        .eval-box {
+            border: 2px dashed var(--primary-teal);
+            padding: 20px;
+            text-align: center;
+            border-radius: 10px;
+        }
+
+        /* Footer */
+        footer {
+            background: var(--primary-navy);
+            color: var(--white);
+            text-align: center;
+            padding: 40px 20px;
+            margin-top: 60px;
+        }
+
+        footer h2 {
+            margin-bottom: 20px;
+        }
+
+        /* Mobile Adjustments */
+        @media (max-width: 768px) {
+            header h1 { font-size: 2rem; }
+            
+            .timeline::before { left: 20px; }
+            .timeline-item { width: 100%; padding-left: 50px; padding-right: 0; text-align: left; }
+            .timeline-item:nth-child(odd) { left: 0; text-align: left; }
+            .timeline-item:nth-child(even) { left: 0; }
+            .timeline-item:nth-child(odd) .timeline-dot,
+            .timeline-item:nth-child(even) .timeline-dot { left: 10px; right: auto; }
+            
+            .evaluation-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>從護理到航空：守護空中健康的專業藍圖</h1>
+        <h2>王姵甯的多元職涯發展規劃</h2>
+        <div class="mission-box">
+            <p>「將醫療專業延伸至旅客服務現場，為全球旅客提供即時的健康管理與緊急應變協助，守護每一段旅程的安心與健康。」</p>
+        </div>
+    </header>
+
+    <section>
+        <h3 class="section-title">我的三大核心基石</h3>
+        <div class="features-grid">
+            <div class="feature-card">
+                <h4>開朗積極，善於溝通</h4>
+                <p>在團隊合作中，我能發揮支持與溝通的角色，建立正向互動。</p>
+            </div>
+            <div class="feature-card">
+                <h4>敏銳同理，安撫情緒</h4>
+                <p>對他人情緒敏感，能有效安撫焦慮，這在醫療與旅客服務中至關重要。</p>
+            </div>
+            <div class="feature-card">
+                <h4>細心盡責，沉著應變</h4>
+                <p>做事細心且有責任感，能在壓力情境下保持冷靜並快速應變。</p>
+            </div>
+        </div>
+
+        <div class="dna-section">
+            <h3>我的專業 DNA</h3>
+            <p>優秀醫療人員與航空服務的核心交集</p>
+            <div class="dna-circles">
+                <div class="dna-circle">耐心</div>
+                <div class="dna-circle">細心</div>
+                <div class="dna-circle">同理心</div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <h3 class="section-title">職涯發展藍圖</h3>
+        <div class="timeline">
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                    <div class="timeline-title">短期目標 (1-3年)</div>
+                    <h4>奠定專業執照與跨域知識</h4>
+                    <p>• 完成護理系課程與臨床實習</p>
+                    <p>• 考取國家護理師執照 (BLS/CPR)</p>
+                    <p>• 顯著提升英語能力與檢定</p>
+                    <p>• 培養航空與緊急醫療基礎知識</p>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                    <div class="timeline-title">中期目標 (3-5年)</div>
+                    <h4>深化研究與拓展國際經驗</h4>
+                    <p>• 攻讀碩士：專注「航空醫療安全管理」</p>
+                    <p>• 國際參與：參加國際志工或航空醫務活動</p>
+                    <p>• 透過實務經驗增強跨文化溝通與應變能力</p>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                    <div class="timeline-title">長期目標 (5年後)</div>
+                    <h4>成為航空醫療領域關鍵角色</h4>
+                    <p>• 擔任航空公司醫療專業人員或健康安全管理助理</p>
+                    <p>• 將專業護理與國際服務完美結合</p>
+                    <p>• 成為具備宏觀國際視野的頂尖護理人才</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section style="background-color: #f9f9f9; border-radius: 10px; padding: 40px;">
+        <h3 class="section-title">確保計畫有效的四步循環</h3>
+        <div class="evaluation-grid">
+            <div class="eval-box">
+                <h4>1. 定期自我檢視</h4>
+                <p>每學期末，系統性檢討學業成績、實習成果與語言能力進展。</p>
+            </div>
+            <div class="eval-box">
+                <h4>2. 設定具體指標</h4>
+                <p>以「取得執照」、「完成實習」、「通過檢定」作為清晰檢核點。</p>
+            </div>
+            <div class="eval-box">
+                <h4>3. 保持彈性策略</h4>
+                <p>因應產業變動或個人興趣，重新評估定位，確保發展持續性。</p>
+            </div>
+            <div class="eval-box">
+                <h4>4. 反思驅動調整</h4>
+                <p>根據評估結果，動態調整未來計畫，修正執行方向。</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <h2>我的終身使命</h2>
+        <p>「將健康照護的界線從地面延伸到三萬英呎的高空，守護旅程中的每一份安心。」</p>
+        <br>
+        <p style="font-size: 0.9rem; opacity: 0.7;">© 2024 Wang Pei-Ning Professional Blueprint</p>
+    </footer>
+
+</body>
+</html>
